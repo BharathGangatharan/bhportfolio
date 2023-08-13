@@ -9,6 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import {HashLink} from 'react-router-hash-link';
+import resumePdf from '../pdf/resume_Bharath.pdf';
 
 
 const useStyles = makeStyles((theme)=>({
@@ -51,7 +52,7 @@ const Intro = () => {
                     </h3>
                     <div className={classes.root} id="buton_variant">
                         <Button  variant="contained" className='resumeButton'>
-                          <a href="#" download>Resume</a>
+                          <a href={resumePdf} download>Resume</a>
                         </Button>
                         <Button  variant="contained" color="secondary" className='wButton'>
                         <li>

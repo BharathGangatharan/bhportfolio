@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Col, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -10,6 +9,9 @@ import CallIcon from '@material-ui/icons/Call';
 import MailIcon from '@material-ui/icons/Mail';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import './FooterNew.css';
+import {HashLink} from 'react-router-hash-link';
+
+
 
 const FooterNew = () => {
   const [click, setClick] = useState(false);
@@ -36,31 +38,31 @@ const FooterNew = () => {
           <Row>
             <Col xs={12} md={6}>
               <ul>
-                <li className="nnav-item">
-                  <Link activeClass="active" to="home" smooth={true} offset={0} duration={10} onClick={handleClick}>Home</Link>
-                </li>
-                <li className="nnav-item">
-                  <Link activeClass="active" to="myInfo" smooth={true} offset={-85} duration={10} onClick={handleClick}>About</Link>
-                </li>
-                <li className="nnav-item">
-                  <Link activeClass="active" to="mySkills" smooth={true} offset={-85} duration={10} onClick={handleClick}>Skills</Link>
-                </li>
-                <li className="nnav-item">
-                  <Link activeClass="active" to="myProject" smooth={true} offset={-85} duration={10} onClick={handleClick}>Projects</Link>
-                </li>
-                <li className="nnav-item">
-                  <Link activeClass="active" to="myContact" smooth={true} offset={-85} duration={10} onClick={handleClick}>Contact</Link>
-                </li>
+              <li className="nnav-item">
+              <HashLink smooth to="/#home" onClick={handleClick}>Home</HashLink>
+            </li>
+            <li className="nnav-item">
+              <HashLink smooth to="/#myInfo" onClick={handleClick}>About</HashLink>
+            </li>
+            <li className="nnav-item">
+              <HashLink smooth to="/#mySkills"  onClick={handleClick}>Skills</HashLink>
+            </li>
+            <li className="nnav-item">
+              <HashLink smooth to="/#myProject" onClick={handleClick}>Projects</HashLink>
+            </li>
+            <li className="nnav-item">
+              <HashLink smooth to="/#myContact" onClick={handleClick}>Contact</HashLink>
+            </li>
               </ul>
             </Col>
             
             <Col xs={12} md={6}>
               <div className="socialMediaLink">
                   <ul>
-                    <li><a href=""><LinkedInIcon/></a></li>
-                    <li><a href=""><InstagramIcon/></a></li>
-                    <li><a href=""><FacebookIcon/></a></li>
-                    <li><a href=""><GitHubIcon/></a></li>
+                    <li><a href="https://www.linkedin.com/in/bharath-g-351084183/" target="_blank"><LinkedInIcon/></a></li>
+                    <li><a href="https://www.instagram.com/_default_one_/" target="_blank"><InstagramIcon/></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100023690471466" target="_blank"><FacebookIcon/></a></li>
+                    <li><a href="https://github.com/BharathGangatharan" target="_blank"><GitHubIcon/></a></li>
                   </ul>
               </div>
           </Col>

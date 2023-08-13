@@ -18,7 +18,7 @@ function NewNavbar() {
     <>
       <nav className="nnavbar">
         <div className="nnav-container">
-          <NavLink exact to="/" className="nnav-logo">
+          <NavLink to="/" className="nnav-logo">
             <img src={LOGO} alt=''/>
           </NavLink>
 

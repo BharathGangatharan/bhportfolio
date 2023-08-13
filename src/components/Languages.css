@@ -15,8 +15,12 @@
     font-family: 'Poppins', sans-serif;
     padding-bottom: 30px;
 }
+.spk_cont h1 {
+    font-family: 'Epilogue', sans-serif;
+}
 .spk_cont h2{
     margin-top: 5px;
+    font-family: 'Epilogue', sans-serif;
 }
 .langs{
     display: flex;

@@ -3,6 +3,8 @@ import { Row } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import './ProgressBar.css';
+import {HashLink} from 'react-router-hash-link';
+
 
 
 const ProgressBar = () => {
@@ -15,8 +17,18 @@ const ProgressBar = () => {
         </div>
         <Row>
           <Col xs={12} md={6}>
-            <div className="img-content">
-
+            <div className="text-content">
+              <p>In order to benefit other members of the developer community, I also enjoy contributing 
+                content that is linked to the knowledge I have acquired over the years in web development. 
+                Please feel free to connect with me or follow me on <a href="https://www.linkedin.com/in/bharath-g-351084183/" target='_blank'>LinkedIn</a>, where I share relevant Web Development 
+                and Programming stuff.
+              </p>
+              <p>
+                I'm interested in employment possibilities where I can grow, learn, and contribute. 
+                Please get in touch with me if you have a suitable opportunity that matches my qualifications and 
+                expertise.
+                <HashLink smooth to="/#myContact">CONTACT</HashLink>
+              </p>
             </div>
           </Col>
           <Col xs={12} md={6}>

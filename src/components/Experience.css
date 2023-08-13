@@ -25,10 +25,11 @@ img{
 }
 
 .exp h2{
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Epilogue', sans-serif;
     font-size: 3rem;
     text-align: center;
     margin-top: 2%;
+    color: #1d3a6d;
 }
 .exp_p{
     font-family: 'Poppins', sans-serif;

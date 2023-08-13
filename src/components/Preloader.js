@@ -5,12 +5,6 @@ import 'animate.css';
 
 const Preloader = ()=>{
     
-    const SvgPathLetter = document.querySelectorAll('.letters path');
-
-    SvgPathLetter.forEach((itm)=>{
-        console.log(itm.getTotalLength());
-    })
-
     return (
         <div className="preloaderContainer">
             <div className="preloaderDiv">

@@ -59,7 +59,7 @@ const ProjectWork = () => {
               {
                 ProjectData.map((eachItm) => {
                   return(
-                    <div className="workCards">
+                    <div className="workCards" key={eachItm.id}>
                       <img src={eachItm.img} className="p1img" alt="" />
                         <button className="workButton">
                           <span className="button_text">
