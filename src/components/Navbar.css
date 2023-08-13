@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;900&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Rubik+Mono+One&display=swap');
+
+
+.nnavbar {
+    width: 100vw;
+    background-color: #0c2d61a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    padding: 0.5rem 0;
+  }
+  
+  .nnav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nnav-logo img{
+    width: 120px;
+    height: auto;
+    padding-left: 50px;
+  }
+  .nnav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    margin-right: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+  }
+  
+  .nnav-menu .nnav-item a{
+    color: #fff !important;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+  }
+  .fa-code {
+    margin-left: 1rem;
+  }
+  
+  .nnav-item {
+    line-height: 40px;
+    margin-right: 1rem;
+  }
+  
+  .nnav-item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+
+  .footer .nnav-item::after {
+    display: none;
+  }
+  
+  .nnav-item:hover:after {
+    width: 100%;
+    background: tomato;
+  }
+  
+  .nnav-item .active {
+    color: tomato;
+  }
+  
+  .nnav-icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .nnav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1pxsolid #fff;
+      position: absolute;
+      top: 80px;
+      left: -110%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nnav-menu.active {
+      background: #020f22a8;
+      left: 0px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      padding: 50px 0;
+    }
+    .nnav-item .active {
+      color: tomato;
+      border: none;
+    }
+    .nnav-links {
+      padding: 1.5rem;
+      width: 100%;
+      display: table;
+    }
+
+    /* .nnav-item:hover:after {
+      width: 30%;
+      margin-left: 200px;
+      background: tomato;
+    }
+   */
+    .nnav-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      cursor: pointer;
+      color: white;
+    }
+    .nnav-icon svg {
+      font-size: 2.5rem;
+    }
+    .nnav-item {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    .nnav-item a {
+      font-size: 28px;
+    }
+  }
+
+
+  @media screen and (max-width:767px){
+    .nnav-logo img {
+      width: 100px;
+      height: auto;
+      padding-left: 25px;
+    }
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: #0c2d61a8;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-fix{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+.logo{
+    font-size: 30px;
+}
+/* .Nav-links{
+    display: flex;
+    list-style: none;
+}
+.home,.skills,.contact,.projects,.about{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 0px 5px;
+    border: 1px solid yellow;
+    padding: 0px 10px;
+}
+.navbar li{
+    font-size: 25px;
+    
+}
+
+.navbar li:hover{
+    border:thick;
+    border-bottom:2px solid tomato;
+}
+
+
+.mobile-menu-icon{
+    display: none;
+}
+@media screen and (max-width:850px){
+    .logo{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+    .Nav-links{
+        display: none;
+    }
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: #0c2d61a8;
+        left: 0;
+        top: 75px;
+        transition: all 0.2s ease-in;
+        width: 100%;
+    }
+    .home,.skills,.contact,.projects,.about{
+        color: black;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px; 
+        background: transparent;
+
+    }
+    li:hover{
+        border: none;
+    }
+}
+
+.menu,.close:hover{
+    cursor: pointer;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .Container{
+    width: 100vw;
+    height: 15%;
+    background-color: #0c2d61a8;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .Container .NavItems {
+      display: none;
+    }
+
+    .ham_menu{
+        display: block;
+    }
+
+    .Container .nav-mobile{
+        display: block;
+        background-color: rgb(8, 8, 44);
+        left: 0;
+        top: 85px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    ul{
+        left: 50px;
+    }
+    li{
+        list-style: none;
+        margin: 5px;
+    }
+    a{
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+
+  }
+
+.NavItems ul{
+    display: flex;
+    font-size: 30px;
+}
+.NavItems li{
+    list-style: none;
+    margin: 0 30px;
+}
+
+.NavItems a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+} */
+/* 
+ul  li:after{
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    border:2px solid transparent;
+    width: 0;
+    height: 0;
+}
+ul  li:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    border:2px solid transparent;
+    width: 0;
+    height: 0;
+}
+.navbar ul  li:hover:before{
+    border-top-color:tomato;
+    width: 100%;
+    height: 100%;
+    border-right-color: tomato;
+    transition: width 0.25s ease-out, height 0.25s ease-out;
+}
+
+ul  li:hover:after{
+    border-bottom-color:tomato;
+    width: 100%;
+    height: 100%;
+    border-left-color: tomato;
+    transition: width 0.25s ease-out, height 0.25s ease-out;
+}
+
+ul  li{
+    position: relative;
+    padding: 5px;
+} */
+
+
+/*Mobile responsive*/

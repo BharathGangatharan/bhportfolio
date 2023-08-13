@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;900&family=Epilogue:wght@200;300;400&family=Poppins:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Rubik+Mono+One&family=Spectral:wght@300;400;500&display=swap');
+.resumeButton{
+    color: #2C4060 !important;
+    font-family: 'Poppins', sans-serif;
+}
+.wButton{
+    color: white !important;
+    font-family: 'Poppins', sans-serif;
+}
+#buton_variant{
+    margin-top: 30px;
+}
+
+.MuiButton-root {
+    width: 150px;
+}
+.intro{
+    background-color: #1d3a6d;
+    padding: 8% 0;
+}
+.intro .container .row {
+    align-items: center;
+}
+
+
+.right .imgContainern {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainern img{
+    height: auto;
+    width: 100%;
+}
+
+
+.intro h2 {
+    font-size: 35px;
+    text-indent: 3px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.intro h1 {
+    font-size: 65px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro h3 {
+    font-size: 69px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.spanDynamic span{
+    font-size: inherit;
+    color: tomato;
+}
+
+.ityped-cursor {
+    animation: blink 1s infinite;
+}
+
+#buton_variant li {
+    list-style: none;
+}
+
+#buton_variant li a{
+    color: #fff;
+    text-decoration: none;
+}
+.resumeButton a {
+    text-decoration: none;
+    color: #19263d;
+}
+
+
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width:767px){
+
+    .intro {
+        padding: 18% 0 20%;
+    }
+    .intro .container > .row{
+        flex-direction: column-reverse;
+    }
+
+    .intro .wrapper {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .intro h2 {
+        font-size: 40px
+    }
+    .intro h1 {
+        font-size: 38px;
+    }
+    
+    .intro h3 {
+        font-size: 38px;
+        padding-bottom: 20px;
+    }
+
+    
+    #buton_variant{
+        margin-top: 0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+// .intro {
+//     background-color: white;
+//     display: flex;
+//     .left {
+//       flex: 0.5;
+//       overflow: hidden;
+  
+//       .imgContainer {
+//         width: 700px;
+//         height: 700px;
+//         background-color: crimson;
+//         border-radius: 50%;
+//         display: flex;
+//         align-items: flex-end;
+//         justify-content: center;
+//         float: right;
+
+  
+//         img {
+//           height: 90%;
+
+//         }
+//       }
+//     }
+//     .right {
+//       flex: 0.5;
+//       position: relative;
+  
+//       .wrapper {
+//         width: 100%;
+//         height: 100%;
+//         padding-left: 50px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+  
+  
+//         h1 {
+//           font-size: 60px;
+//           margin: 10px 0;
+  
+//         }
+//         h2 {
+//           font-size: 35px;
+//         }
+//         h3 {
+//           font-size: 30px;
+  
+//           span {
+//             font-size: inherit;
+//             color: crimson;
+//           } */
+  
+/* //           .ityped-cursor {
+//             animation: blink 1s infinite;
+//           }
+  
+//           @keyframes blink {
+//               50%{
+//                   opacity: 1;
+//               }
+//               100%{
+//                   opacity: 0;
+//               }
+//           }
+//         }
+//       }
+//     }
+//   } */

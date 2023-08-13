@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;900&family=Epilogue:wght@200;300;400&family=Poppins:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Rubik+Mono+One&display=swap');
+.bio_Container{
+    padding: 8rem 0 12%;
+    background-color: #7585a1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bio_Container .row {
+    align-items: center;
+}
+.my_bio {
+    max-width: 620px;
+}
+.my_bio_pic img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.my_bio_p{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin:5px 0 5px 0;
+    font-size: 1.4rem;
+    font-weight:550;
+    padding-bottom: 30px;
+}
+.my_bio_h{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.my_bio_h h1{
+    color: rgb(10, 10, 46);
+}
+
+
+.my_bio_p .about_p_dark{
+    font-weight: bold;
+    color: rgb(10, 10, 46);
+}
+
+.bgquotes {
+    background-color: rgb(10, 10, 46);
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0;
+    border-radius: 20px;
+}
+
+.tick {
+    font-size: 4rem !important;
+}
+
+
+@media screen and (max-width:767px){
+
+    .bio_Container {
+        padding: 40% 0 10%;
+    }
+    .my_bio .bgquotes {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .my_bio_pic {
+        margin-bottom: 30px;
+    }
+
+    .bio_Container .row {
+        flex-direction: column-reverse;
+    }
+    .tick {
+        font-size: 2.5rem !important;
+    }
+  
+  }

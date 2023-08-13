@@ -1,0 +1,157 @@
+.project_Desc_container .content {
+    background-color: #fbca6b;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+
+.topContent {
+    background-color: rgb(4, 12, 34);
+}
+
+.project_Desc_container .mini_info {
+    padding: 14% 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+
+.project_Desc_container .mini_info h1 {
+    color: #fbca6b;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+}
+
+
+
+.project_Desc_container .mini_info p {
+    color: #e9e9eb;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 0;
+}
+
+
+
+.project_Desc_container .mini_info a {
+    color: rgb(4, 12, 34);
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fbca6b;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+
+
+.prj_desc {
+    text-align: center;
+}
+
+
+
+.prj_overview,
+.prj_bottom {
+    padding: 8% 0 4%;
+}
+
+.prj_overview p{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 6%;
+    text-align: initial;
+    color: rgb(4, 12, 34);
+}
+
+
+.prj_languages h2,
+.prj_bottom h2 {
+    padding: 20px 0 50px;
+    color: rgb(4, 12, 34);
+
+}
+
+
+
+.prj_languages span {
+    padding: 10px 20px;
+    background-color: #1d3a6d;
+    margin-right: 20px;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    color: #fbca6b;
+}
+
+
+
+.project_Desc_container .row>* {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.prj_bottom a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 22px;
+    line-height: 28px;
+    color: #fbca6b;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #1d3a6d;
+    font-family: 'Poppins', sans-serif;
+}
+
+.prj_bottom {
+    padding-bottom: 10rem;
+}
+
+
+.project_Desc_container h1 , .project_Desc_container h2{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 50px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .project_Desc_container .mini_info {
+        padding: 40% 0;
+        max-width: 90%;
+    }
+
+    .project_Desc_container .mini_info h1,
+    .project_Desc_container h2 {
+        font-size: 40px;
+    }
+
+    .prj_overview, .prj_bottom {
+        padding: 30% 0 4%;
+    }
+
+    .prj_languages span {
+        display: block;
+        margin-right: 0;
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    .prj_bottom {
+        padding: 15% 0 20%;
+    }
+}

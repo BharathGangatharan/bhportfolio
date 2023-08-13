@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;900&family=Epilogue:wght@200;300;400&family=Poppins:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Rubik+Mono+One&family=Spectral:wght@300;400;500&display=swap');
+
+.background{
+    background-color: #e9e9eb;
+    padding: 7% 0 4%;
+}
+
+ul {
+    padding-left: 0 !important;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 28px;
+    color: #1d3a6d !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer__col1__title {
+    color: #1d3a6d;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+}
+.socialMediaLink {
+    padding-top: 8px;
+}
+
+.socialMediaLink li {
+    margin-bottom: 12px;
+}
+
+.socialMediaLink svg, .Footer__Paraf svg  {
+    width: 2rem;
+    height: 2rem;
+}
+
+.nnav-item:after {
+    display: none;
+}
+.nnav-item:hover:after {
+    display: none;
+}
+
+.FF__Container{
+    padding: 0 4% 3%;
+}
+
+.container .col-md-8 .row div {
+    display: flex;
+    justify-content: center;
+}
+
+.Footer__Paraf2 {
+    display: flex;
+    align-items: center;
+}
+
+.Footer__Paraf2 svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.Footer__Paraf a{
+    color: #1d3a6d;
+    max-width: 500px;
+    margin: 0 10px;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.footer_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
+    font-family:'Epilogue', sans-serif;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #1d3a6d;
+    padding: 2rem 0 0;
+}
+.Footer__Paraf {
+    padding-left: 25px;
+}
+
+@media screen and (max-width:767px){
+
+    .footer__col1__title {
+        padding-bottom: 15px;
+    }
+
+    .background.footer {
+        padding: 18% 0;
+    }
+
+    .footer__col1 {
+        text-align: center;
+    }
+
+    .Footer__Paraf {
+        padding-left: 0;
+    }
+
+    .footer ul {
+        padding: 40px 0 35px;
+        text-align: center;
+    }
+
+    .footer .socialMediaLink ul {
+        padding: 0;
+        display: flex;
+    }
+
+    .footer .socialMediaLink ul li{
+        margin: 0 10px;
+    }
+}

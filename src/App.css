@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.bottomToTopIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  cursor: pointer;
+  background-color: tomato;
+  border-radius: 50%;
+  width: 2rem !important;
+  height: 2rem !important;
+  z-index: 99;
+  fill: #fff !important;
+}

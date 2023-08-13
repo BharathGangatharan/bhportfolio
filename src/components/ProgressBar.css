@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;900&family=Poppins:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&family=Rubik+Mono+One&display=swap');
+
+.skills_container .container {
+    position: relative;
+}
+
+.skills_container {
+    padding: 12% 0;
+    background-color: #1d3a6d;
+}
+.skills_container .fd h1 {
+    font-family: 'Epilogue', sans-serif;
+    text-align: center;
+    color: tomato;
+    padding-bottom: 3rem;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.skill_main_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill_main_content > span {
+    font-family: 'Epilogue', sans-serif;
+    padding: 0.6rem 1rem 0.4rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #1d3a6d;
+}
+
+.skill_main_content span:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.skill_main_content > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_container .skill_main_content  span:nth-child(2n+1) {
+    background-color: #fbca6b;
+}
+.skills_container .skill_main_content  span:nth-child(2n+2) {
+    background-color:#e9e9eb;
+}
+
+/* .skills_container .skill_main_content  span:nth-child(2n+3) {
+    background-color: tomato;
+} */
+
+
+.skills_container .img-content {
+    border-right: 2px solid #e9e9eb;
+    height: 290px;
+    position: absolute;
+    left: 45%;
+}   
+
+@media screen and (max-width: 767px) {
+    .skill_main_content .img-content {
+        top: -12%;
+        transform: rotate(90deg);
+    }
+}
