@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation} from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import ScrollTop from "./components/pages/ScrollTop";
@@ -10,7 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ProjectDesc from "./components/ProjectDesc";
 import Preloader from "./components/Preloader";
 
-function App() {
+const App = ()=> {
 
   const [isLoading, setIsloading] = useState(true);
 
@@ -20,9 +20,11 @@ function App() {
     },3700)
   },[])
 
+
   return (
 
     <>
+    
         {
       isLoading ? < Preloader/> :  (
         <div className="app">

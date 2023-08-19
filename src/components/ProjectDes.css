@@ -12,7 +12,7 @@
 }
 
 .project_Desc_container .mini_info {
-    padding: 14% 0 10%;
+    padding: 14% 0 12%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,13 +56,11 @@
 
 .prj_desc {
     text-align: center;
+    padding: 18% 0 8%;
 }
 
-
-
-.prj_overview,
-.prj_bottom {
-    padding: 8% 0 4%;
+.prj_languages {
+    padding: 5% 0 7%;
 }
 
 .prj_overview p{
@@ -108,7 +106,7 @@
 
 .prj_bottom a {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 40px;
     font-size: 22px;
     line-height: 28px;
     color: #fbca6b;
@@ -153,5 +151,11 @@
 
     .prj_bottom {
         padding: 15% 0 20%;
+    }
+
+    .prj_bottom a {
+        display: block;
+        margin-bottom: 20px;
+        margin-right: 0;
     }
 }

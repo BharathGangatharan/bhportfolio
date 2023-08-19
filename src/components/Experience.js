@@ -1,13 +1,64 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import CTS from '../image/cts.png'
 import './Experience.css'
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 const Experience = () => {
+
+  const {ref, inView} = useInView({
+    threshold: 0.2
+  });
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(()=>{
+    if(inView){
+
+      animation.start({
+        opacity: 1,
+        y: 0,
+        transition : {
+            delay: 0.3,
+            duration: 1,
+            type:"spring",
+        }
+      })
+      animation2.start({
+        opacity: 1,
+        x: 0,
+        scale:[0.3,1.2,1],
+        transition : {
+            delay: 0.6,
+            duration: 1,
+            type:"spring",
+        }
+      })
+
+    }
+
+    if(!inView){
+      animation.start({
+          opacity: 0,
+          y: 100,           
+      })
+
+      animation2.start({
+          opacity: 0,
+          x: '100vw',           
+      })
+  }
+
+
+  },[inView])
+
+
   return (
 
-      <div className='exp'>
-            <h2>EXPERIENCE</h2>
-          <div className='exp_cont'>
+      <div className='exp' ref={ref}>
+          <motion.h2 animate={animation}>EXPERIENCE</motion.h2>
+          <motion.div className='exp_cont' animate={animation2}>
             <div className='exp_img'>
                 <img src={CTS} alt="" />
             </div>
@@ -18,7 +69,7 @@ const Experience = () => {
                 The ability to speak with clients directly and carry out my work in accordance with their objectives and needs is 
                 another benefit I received from this organization.
             </div>
-        </div>
+        </motion.div>
     </div>
 
   )}

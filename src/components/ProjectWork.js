@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect} from 'react';
 import "./ProjectWork.css";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import Row from "react-bootstrap/Row";
@@ -8,9 +8,19 @@ import { ProjectData } from "../datas/ProjectData.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
+
 
 
 const ProjectWork = () => {
+
+  const {ref, inView} = useInView({
+    threshold: 0.2
+  });
+  const animation = useAnimation();
+  const animation2 = useAnimation();
 
   const settings = {
     dots: true,
@@ -47,19 +57,56 @@ const ProjectWork = () => {
     ]
   };
 
+  useEffect(()=>{
+
+    if(inView){
+      animation.start({
+        opacity: 1,
+        x: 0,
+        transition : {
+          delay: 0.3,
+          duration: 1,
+          type:"spring",
+        }
+      })
+
+      animation2.start({
+        opacity: 1,
+        x: 0,
+        transition : {
+          delay: 1,
+          duration: 1,
+          type:"spring",
+        }
+      })
+    }
+
+    if(!inView){
+      animation.start({
+        opacity: 0,
+        x: '-100vw'
+      })
+      animation2.start({
+        opacity: 0,
+        x: '100vw'
+      })
+    }
+
+  },[inView])
+
   return (
-    <div className="projectContianer" id="myProject">
+    <div className="projectContianer" id="myProject" ref={ref}>
       <Container>
         <Row>
           <div className="projectHead">
-            <h1> PROJECTS </h1>
+            <motion.h1 animate={animation}> PROJECTS </motion.h1>
           </div>
-          <div className="work">
+          <motion.div className="work" animate={animation2}>
             <Slider {...settings}>
               {
                 ProjectData.map((eachItm) => {
                   return(
-                    <div className="workCards" key={eachItm.id}>
+                    <motion.div className="workCards" key={eachItm.id}>
                       <img src={eachItm.img} className="p1img" alt="" />
                         <button className="workButton">
                           <span className="button_text">
@@ -67,12 +114,12 @@ const ProjectWork = () => {
                           </span>
                           <span className="button_icon"><ArrowForwardIosIcon /></span>
                         </button>
-                    </div>
+                    </motion.div>
                   )
                 })
               }
             </Slider>
-          </div>
+          </motion.div>
         </Row>
       </Container>
     </div>

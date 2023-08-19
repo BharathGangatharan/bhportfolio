@@ -76,6 +76,22 @@
     color: #19263d;
 }
 
+#buton_variant  .resumeButton {
+    background-color: #e0e0e0;
+}
+
+#buton_variant  .wButton {
+    background-color: #f50057;
+}
+
+#buton_variant  .resumeButton, #buton_variant  .wButton {
+    padding: 7px 15px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+}
+
 
 @keyframes blink {
     50%{

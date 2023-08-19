@@ -1,11 +1,58 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {Line} from 'react-chartjs-2'
 import './LineChart.css'
 import {Chart as ChartJS} from 'chart.js/auto'
 import {Chart} from 'react-chartjs-2'
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 
 const LineChart = () => {
+
+    const {ref, inView} = useInView({
+        threshold: 0.2
+      });
+    const animation = useAnimation();
+    const animation2 = useAnimation();
+
+    useEffect(()=>{
+        if(inView){
+    
+          animation.start({
+            opacity: 1,
+            x: 0,
+            transition : {
+                delay: 0.5,
+                duration: 1,
+                type:"spring",
+            }
+          })
+          animation2.start({
+            opacity: 1,
+            x: 0,
+            transition : {
+                delay: 0.8,
+                duration: 1,
+                type:"spring",
+            }
+          })
+
+        }
+
+        if(!inView){
+            animation.start({
+                opacity: 0,
+                x: '-100vw',           
+            })
+
+            animation2.start({
+                opacity: 0,
+                x: '100vw',           
+            })
+        }
+
+    },[inView])
 
     const data={
         labels:['10th','12th','1st Sem','2nd Sem','3rd Sem','4th Sem','5th Sem', '6th Sem','7th Sem','8th Sem'],
@@ -47,14 +94,14 @@ const LineChart = () => {
     }
 
   return(
-      <div className='chart_main'>
+      <div className='chart_main' ref={ref}>
         <div className='chart'>
-            <div className='chart_heading'>
+            <motion.div className='chart_heading' animate={animation}>
                 <h2>MY ACADEMICS</h2>
-            </div>
-            <div className='chart_line'>
+            </motion.div>
+            <motion.div className='chart_line' animate={animation2}>
                 <Line data={data} options={options}/>
-            </div>
+            </motion.div>
         </div>
       </div>
   )};

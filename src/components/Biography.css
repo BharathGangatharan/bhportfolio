@@ -57,6 +57,11 @@
     font-size: 4rem !important;
 }
 
+.emoji {
+    position: relative !important;
+    bottom: 5px !important;
+}
+
 
 @media screen and (max-width:767px){
 

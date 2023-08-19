@@ -48,6 +48,9 @@
 .workCards {
     position: relative;
 }
+.workCards:hover {
+    z-index: 99;
+}
 
 .workCards:hover .button_text a {
     text-decoration: none;

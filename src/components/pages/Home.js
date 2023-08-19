@@ -4,6 +4,7 @@ import ProgressBar from '../ProgressBar';
 import ProjectWork from '../ProjectWork';
 import ContactUs from '../ContactUs';
 import Intro from '../Intro';
+import { motion } from "framer-motion";
 
 
 // import ParticleBackground from './Particles/ParticleBackground';
@@ -17,13 +18,13 @@ const Home = () => {
 
     return(
     
-         <div>
+         <motion.div>
             <Intro/>
             <MyInfo/>
             <ProgressBar/>
             <ProjectWork/>
             <ContactUs/>
-        </div>    
+        </motion.div>    
 )};
 
 export default Home;

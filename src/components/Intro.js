@@ -10,6 +10,10 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import {HashLink} from 'react-router-hash-link';
 import resumePdf from '../pdf/resume_Bharath.pdf';
+import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 
 const useStyles = makeStyles((theme)=>({
@@ -29,6 +33,13 @@ const Intro = () => {
     const textRef = useRef();
     const classes = useStyles();
 
+    const {ref, inView} = useInView({
+      threshold: 0.2
+    });
+    const animation = useAnimation();
+    const animation2 = useAnimation();
+    const animationButtonBall = useAnimation();
+
     useEffect(() => {
       init(textRef.current, {
         showCursor: true,
@@ -38,12 +49,68 @@ const Intro = () => {
       });
     }, []);
 
+    useEffect(()=>{
+
+      if(inView){
+        animation.start({
+          opacity: 1,
+          x: 0,
+          transition : {
+            delay: 0.5,
+            duration: 1,
+            type:"spring",
+          }
+        })
+
+        animation2.start({
+          opacity: 1,
+          x: 0,
+          transition : {
+            delay: 0.7,
+            duration: 1,
+            type:"tween",
+          }
+        })
+
+        animationButtonBall.start({
+          opacity: 1,
+          y: [ 10, -10],
+          transition : {
+            delay: 1.5,
+            duration: 1,
+            yoyo: Infinity,
+            ease: "easeOut",
+          }
+        })
+      }
+
+      if(!inView){
+        animation.start({
+          opacity: 0,
+          x: '-100vw'
+        })
+
+        animation2.start({
+          opacity: 0,
+          x: '100vw'
+        })
+
+        animationButtonBall.start({
+          opacity: 1,      
+        })
+
+      }
+
+    },[inView])
+
   return (
-      <div className="intro" id="home">
+      <div className="intro" id="home" ref={ref}>
         <Container>
           <Row>
             <Col xs={12} md={6}>
-              <div className="left">
+              <motion.div className="left"              
+                animate={animation}   
+              >
                 <div className="wrapper">
                     <h2>Hyy There, I'm</h2>
                     <h1>Bharath G</h1>
@@ -51,24 +118,28 @@ const Intro = () => {
                       <span ref={textRef}></span>
                     </h3>
                     <div className={classes.root} id="buton_variant">
-                        <Button  variant="contained" className='resumeButton'>
+                        <motion.Button animate={animationButtonBall} variant="contained" className='resumeButton'>
                           <a href={resumePdf} download>Resume</a>
-                        </Button>
-                        <Button  variant="contained" color="secondary" className='wButton'>
+                        </motion.Button>
+                        <motion.Button animate={animationButtonBall} variant="contained" color="secondary" className='wButton'>
                         <li>
                           <HashLink smooth to="/#myProject">My Works</HashLink>
                         </li>
-                        </Button>
+                        </motion.Button>
                     </div>
                   </div>
-              </div>
+              </motion.div>
             </Col>
             <Col xs={12} md={6}>
-              <div className="right">
-                <div className="imgContainern">
-                  <img src={KK} alt="" />
-                </div>
-              </div>
+              <motion.div className="right"
+              animate={animation2} >
+                <Tilt tiltMaxAngleX={30} 
+        tiltMaxAngleY={30} perspective={1000} >
+                  <div className="imgContainern">
+                    <img src={KK} alt="" />
+                  </div>
+                </Tilt>
+              </motion.div>
             </Col>
         </Row>
         </Container>
