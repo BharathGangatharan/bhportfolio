@@ -171,7 +171,7 @@ const FooterNew = () => {
             <Col xs={12} md={6}>
               <motion.div className="socialMediaLink" animate={animation3}>
                   <ul>
-                    <motion.li animate={animationli} custom={1}><a href="https://www.linkedin.com/in/bharath-g-351084183/" target="_blank"><LinkedInIcon/></a></motion.li>
+                    <motion.li animate={animationli} custom={1}><a href="https://www.linkedin.com/in/bharath-g/" target="_blank"><LinkedInIcon/></a></motion.li>
                     <motion.li animate={animationli} custom={2}><a href="https://www.instagram.com/_default_one_/" target="_blank"><InstagramIcon/></a></motion.li>
                     <motion.li animate={animationli} custom={3}><a href="https://www.facebook.com/profile.php?id=100023690471466" target="_blank"><FacebookIcon/></a></motion.li>
                     <motion.li animate={animationli} custom={4}><a href="https://github.com/BharathGangatharan" target="_blank"><GitHubIcon/></a></motion.li>

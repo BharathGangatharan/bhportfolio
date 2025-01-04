@@ -100,7 +100,7 @@ const MyInfo = () => {
                   >
                     <h2>Let Me Introduce Myself</h2>
                     <p className='p1'>
-                        My name is <span className='darkk'>BHARATH G</span>, and I currently work for <span className='darkk'>Cognizant Technology Solutions</span> in India as a <span className='darkk'>UI Developer</span>.
+                        My name is <span className='darkk'>BHARATH G</span>, and I currently work for <span className='darkk'>EY</span> in India as a <span className='darkk'>Frontend Developer</span>.
                     </p>
                     <p className='p2'>
                       As per my Academic background , I have completed my Bachelor's in Engineering under the specialization <span className='darkk'>

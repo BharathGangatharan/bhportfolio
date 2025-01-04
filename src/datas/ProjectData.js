@@ -33,7 +33,7 @@ export const ProjectData = [
         "languages":["React","Html","Css","Javascript","ES5/ES6", "Bootstrap","Firebase"],
         "img":P3,
         "gitlink":"https://github.com/BharathGangatharan/Corona---Table",
-        "live":"https://bhfinancialtracker.netlify.app/"
+        "live":"https://bhrealchatapp2023.netlify.app/"
     },
     {
         "id":"Prj4",

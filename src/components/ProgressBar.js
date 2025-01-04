@@ -102,7 +102,7 @@ const ProgressBar = () => {
             <motion.div className="text-content" animate={animation}>
               <p>In order to benefit other members of the developer community, I also enjoy contributing 
                 content that is linked to the knowledge I have acquired over the years in web development. 
-                Please feel free to connect with me or follow me on <a href="https://www.linkedin.com/in/bharath-g-351084183/" target='_blank'>LinkedIn</a>, where I share relevant Web Development 
+                Please feel free to connect with me or follow me on <a href="https://www.linkedin.com/in/bharath-g/" target='_blank'>LinkedIn</a>, where I share relevant Web Development 
                 and Programming stuff.
               </p>
               <p>
@@ -126,10 +126,12 @@ const ProgressBar = () => {
                 <motion.span animate={animation3} custom={8}>REACT</motion.span>
                 <motion.span animate={animation3} custom={9}>REDUX</motion.span>
                 <motion.span animate={animation3} custom={10}>ES5/ES6</motion.span>
-                <motion.span animate={animation3} custom={11}>AJAX</motion.span>
-                <motion.span animate={animation3} custom={12}>WEB ACCESSIBILITY</motion.span>
-                <motion.span animate={animation3} custom={13}>GIT</motion.span>
-                <motion.span animate={animation3} custom={14}>RESPONSIVE WEB DESIGN</motion.span>
+                <motion.span animate={animation3} custom={11}>TYPESCRIPT</motion.span>
+                <motion.span animate={animation3} custom={12}>AJAX</motion.span>
+                <motion.span animate={animation3} custom={13}>WEB ACCESSIBILITY</motion.span>
+                <motion.span animate={animation3} custom={14}>GIT</motion.span>
+                <motion.span animate={animation3} custom={15}>JEST</motion.span>
+                <motion.span animate={animation3} custom={16}>RESPONSIVE WEB DESIGN</motion.span>
           </div>
           </motion.div>
         </Col>
